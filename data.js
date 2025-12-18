@@ -1,5 +1,5 @@
 const BDYC_DATA = {
-    currentMonth: "November 2025",
+    currentMonth: "January 2026",
 
     sectors: [
         {
@@ -118,7 +118,7 @@ const BDYC_DATA = {
             sector: "Finance & Investing",
             winnerName: "Winner Announcement Coming Soon",
             school: "School/City - TBA",
-            description: "The November 2025 Finance & Investing challenge winner will be announced soon. Check back for the winning submission!",
+            description: "The January 2026 Finance & Investing challenge winner will be announced soon. Check back for the winning submission!",
             workLink: null,
             announced: false
         },
@@ -126,7 +126,7 @@ const BDYC_DATA = {
             sector: "Entrepreneurship",
             winnerName: "Winner Announcement Coming Soon",
             school: "School/City - TBA",
-            description: "The November 2025 Entrepreneurship challenge winner will be announced soon. Check back for the winning submission!",
+            description: "The January 2026 Entrepreneurship challenge winner will be announced soon. Check back for the winning submission!",
             workLink: null,
             announced: false
         },
@@ -134,7 +134,7 @@ const BDYC_DATA = {
             sector: "Marketing",
             winnerName: "Winner Announcement Coming Soon",
             school: "School/City - TBA",
-            description: "The November 2025 Marketing challenge winner will be announced soon. Check back for the winning submission!",
+            description: "The January 2026 Marketing challenge winner will be announced soon. Check back for the winning submission!",
             workLink: null,
             announced: false
         },
@@ -142,7 +142,7 @@ const BDYC_DATA = {
             sector: "Economics",
             winnerName: "Winner Announcement Coming Soon",
             school: "School/City - TBA",
-            description: "The November 2025 Economics challenge winner will be announced soon. Check back for the winning submission!",
+            description: "The January 2026 Economics challenge winner will be announced soon. Check back for the winning submission!",
             workLink: null,
             announced: false
         },
@@ -150,7 +150,7 @@ const BDYC_DATA = {
             sector: "Strategy",
             winnerName: "Winner Announcement Coming Soon",
             school: "School/City - TBA",
-            description: "The November 2025 Strategy challenge winner will be announced soon. Check back for the winning submission!",
+            description: "The January 2026 Strategy challenge winner will be announced soon. Check back for the winning submission!",
             workLink: null,
             announced: false
         }
