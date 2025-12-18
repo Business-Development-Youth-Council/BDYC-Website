@@ -1,0 +1,1030 @@
+/* Color Palette */
+:root {
+    --primary-blue: #014089;
+    --primary-yellow: #E8C14E;
+    --primary-white: #FCFEFD;
+    --navy-blue: #0D1F3C;
+    --gold: #FFD700;
+    --soft-gray: #F4F4F4;
+    --deep-blue: #1B3B6F;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: var(--primary-white);
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: var(--navy-blue) !important;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--primary-white) !important;
+}
+
+/* Navbar logo sizing (logo only, no text) */
+.navbar-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Hide any textual brand content if present - show only the image */
+.navbar-brand > .brand-text {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 40px;
+    }
+}
+
+.brand-text {
+    color: var(--gold);
+    letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--primary-white) !important;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--gold) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 80%;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+    color: var(--primary-white);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    min-height: auto;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(252,254,253,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    opacity: 0.3;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-logo {
+    width: 20vw; /* bigger on larger screens, scales down on small screens */
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.35));
+    animation: fadeInDown 0.8s ease-out;
+    margin: 0 auto; /* center if image is inline */
+    display: block;
+}
+
+.hero-section h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: var(--primary-yellow);
+    font-weight: 600;
+}
+
+.hero-description {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--primary-blue);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--deep-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(1, 64, 137, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--primary-yellow);
+    border: none;
+    color: var(--navy-blue);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--gold);
+    color: var(--navy-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(232, 193, 78, 0.3);
+}
+
+.btn-outline-gold {
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--gold);
+    color: var(--navy-blue);
+    transform: translateY(-2px);
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    border: none;
+    color: var(--navy-blue);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    background-color: var(--primary-yellow);
+    color: var(--navy-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary-blue);
+    color: var(--primary-blue);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+    transform: translateY(-2px);
+}
+
+/* Sections */
+.sectors-section {
+    background-color: var(--soft-gray);
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+}
+
+.section-title {
+    color: var(--navy-blue);
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+}
+
+/* Sector Cards */
+.sector-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sector-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(1, 64, 137, 0.2);
+    border-color: var(--primary-blue);
+}
+
+.sector-icon {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
+
+.sector-title {
+    color: var(--navy-blue);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.sector-description {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.cta-card {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+    color: var(--primary-white);
+}
+
+.cta-card .sector-icon {
+    color: var(--gold);
+}
+
+.cta-card .sector-title,
+.cta-card .sector-description {
+    color: var(--primary-white);
+}
+
+/* Winners Preview Section */
+.winners-preview-section {
+    background-color: var(--primary-white);
+}
+
+.winner-preview-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid var(--soft-gray);
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.winner-preview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(232, 193, 78, 0.2);
+    border-color: var(--primary-yellow);
+}
+
+.winner-sector {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--navy-blue);
+    color: var(--primary-white);
+}
+
+.footer h5 {
+    color: var(--gold);
+}
+
+.footer a {
+    color: var(--primary-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--gold);
+}
+
+.social-links .social-link {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.social-links .social-link:hover {
+    transform: translateY(-5px);
+    color: var(--gold);
+}
+
+
+.social-icon {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--gold);
+    transform: scale(1.2);
+}
+
+/* About Page Styles */
+.about-hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+    color: var(--primary-white);
+    padding: 5rem 0 3rem;
+}
+
+.about-content {
+    padding: 4rem 0;
+}
+
+.mission-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--primary-blue);
+}
+
+.founder-section {
+    background-color: var(--soft-gray);
+    padding: 4rem 0;
+}
+
+.founder-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.founder-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.placeholder-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    border: 5px solid var(--gold);
+}
+
+.placeholder-image i {
+    font-size: 4rem;
+    color: var(--gold);
+}
+
+.leadership-section {
+    padding: 4rem 0;
+}
+
+.team-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(1, 64, 137, 0.2);
+}
+
+.role-badge {
+    display: inline-block;
+    background-color: var(--primary-yellow);
+    color: var(--navy-blue);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+/* Competitions Page Styles */
+.competitions-hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+    color: var(--primary-white);
+    padding: 5rem 0 3rem;
+}
+
+.process-section {
+    padding: 4rem 0;
+    background-color: var(--soft-gray);
+}
+
+.process-step {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1.5rem;
+}
+
+.criteria-section {
+    padding: 4rem 0;
+}
+
+.criteria-item {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary-blue);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.criteria-item:hover {
+    transform: translateX(10px);
+    border-left-color: var(--gold);
+}
+
+/* Results Page Styles */
+.results-hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+    color: var(--primary-white);
+    padding: 5rem 0 3rem;
+}
+
+.winner-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border-top: 5px solid var(--gold);
+}
+
+.winner-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(232, 193, 78, 0.3);
+}
+
+.trophy-icon {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.sector-badge {
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Archive Page Styles */
+.archive-hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+    color: var(--primary-white);
+    padding: 5rem 0 3rem;
+}
+
+.month-accordion {
+    margin-bottom: 1.5rem;
+}
+
+.accordion-button {
+    background-color: var(--navy-blue);
+    color: var(--primary-white);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-blue);
+    color: var(--primary-white);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(1, 64, 137, 0.25);
+}
+
+.archive-winner-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.archive-winner-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(1, 64, 137, 0.2);
+}
+
+/* Join Page Styles */
+.join-hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+    color: var(--primary-white);
+    padding: 5rem 0 3rem;
+}
+
+.benefits-section {
+    padding: 4rem 0;
+    background-color: var(--soft-gray);
+}
+
+.benefit-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(1, 64, 137, 0.2);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
+
+.cta-section {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%);
+    color: var(--primary-white);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(1, 64, 137, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .navbar-nav .nav-link {
+        margin: 0.5rem 0;
+    }
+
+    /* All card types - smaller on tablet */
+    .sector-card {
+        margin-bottom: 1rem;
+        padding: 1.5rem;
+    }
+
+    .sector-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .sector-title {
+        font-size: 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .sector-description {
+        font-size: 0.9rem;
+    }
+
+    .winner-card,
+    .benefit-card,
+    .team-card,
+    .winner-preview-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .winner-card h4,
+    .benefit-card h4,
+    .team-card h4 {
+        font-size: 1.25rem;
+    }
+
+    .winner-card p,
+    .benefit-card p,
+    .team-card p {
+        font-size: 0.9rem;
+    }
+
+    .founder-card {
+        padding: 1.5rem;
+    }
+
+    .founder-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .placeholder-image {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .placeholder-image i {
+        font-size: 3rem !important;
+    }
+
+    .process-step {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .process-step h4 {
+        font-size: 1.25rem;
+    }
+
+    .process-step p {
+        font-size: 0.9rem;
+    }
+
+    .trophy-icon {
+        font-size: 2.5rem;
+    }
+
+    .benefit-icon {
+        font-size: 2.5rem;
+    }
+
+    .mission-card {
+        padding: 2rem;
+    }
+
+    .cta-box {
+        padding: 2rem;
+    }
+
+    .archive-winner-card {
+        padding: 1.25rem;
+    }
+
+    .criteria-item {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-logo {
+        max-width: 180px;
+        max-height: 120px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    /* All sector cards - more compact on mobile */
+    .sector-card {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .sector-icon {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .sector-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sector-description {
+        font-size: 0.85rem;
+    }
+
+    /* Winner cards - more compact */
+    .winner-card {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .winner-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .winner-card p {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .trophy-icon {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .sector-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+
+    /* Benefit cards - more compact */
+    .benefit-card {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .benefit-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .benefit-card p {
+        font-size: 0.85rem;
+    }
+
+    .benefit-icon {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Team cards - more compact */
+    .team-card {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .team-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .team-card p {
+        font-size: 0.85rem;
+    }
+
+    .role-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    /* Process step cards - more compact */
+    .process-step {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .process-step h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .process-step p {
+        font-size: 0.85rem;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Winner preview cards - more compact */
+    .winner-preview-card {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .winner-preview-card h5 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .winner-preview-card p {
+        font-size: 0.85rem;
+    }
+
+    .winner-sector {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+
+    /* Founder cards - more compact */
+    .founder-card {
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .founder-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .founder-card h5 {
+        font-size: 1rem;
+    }
+
+    .founder-card p {
+        font-size: 0.85rem;
+    }
+
+    .placeholder-image {
+        width: 120px !important;
+        height: 120px !important;
+        margin-bottom: 1rem;
+    }
+
+    .placeholder-image i {
+        font-size: 2.5rem !important;
+    }
+
+    /* Mission cards - more compact */
+    .mission-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .mission-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .mission-card p {
+        font-size: 0.85rem;
+    }
+
+    /* Archive winner cards - more compact */
+    .archive-winner-card {
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .archive-winner-card h5 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .archive-winner-card p {
+        font-size: 0.85rem;
+    }
+
+    /* Criteria items - more compact */
+    .criteria-item {
+        padding: 1rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .criteria-item h5 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .criteria-item p {
+        font-size: 0.85rem;
+    }
+
+    /* CTA box - more compact */
+    .cta-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .cta-box h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .cta-box p {
+        font-size: 0.9rem;
+    }
+
+    /* Buttons - slightly smaller */
+    .btn-lg {
+        padding: 0.65rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Utility Classes */
+.text-gold {
+    color: var(--gold);
+}
+
+.bg-navy {
+    background-color: var(--navy-blue);
+}
+
+.bg-soft-gray {
+    background-color: var(--soft-gray);
+}

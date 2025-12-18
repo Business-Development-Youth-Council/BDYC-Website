@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>About - Business Development Youth Council</title>
+        <meta name='description' content='Learn about BDYC, our mission, and our leadership team.'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+        <!-- Favicon: BDYC Icon.png -->
+        <link rel="icon" href="Images/BDYC Icon.png" type="image/png">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/bfbf24a258.js" crossorigin="anonymous"></script>
+        <link rel='stylesheet' href='style.css'>
+    </head>
+    <body>
+        <div id="navbar-placeholder"></div>
+
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="text-center" data-aos="fade-up">
+                    <h1 class="display-3 fw-bold mb-3">About BDYC</h1>
+                    <p class="lead">Empowering youth through competitive business learning</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="about-content">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10" data-aos="fade-up">
+                        <div class="mission-card">
+                            <h2 class="fw-bold mb-4" style="color: #014089;">Our Mission</h2>
+                            <p class="lead mb-4">
+                                The Business Development Youth Council (BDYC) is a global student-run initiative focused on engaging youth in competitive business learning. Our mission is to create a space where ambitious students can explore real-world business concepts, compete across multiple sectors, and showcase their talent on an international stage.
+                            </p>
+                            <p class="lead mb-0">
+                                We believe in <strong>learning by doing</strong> — every month brings a new challenge that tests members' problem-solving, creativity, and financial literacy across five major business sectors: Finance & Investing, Entrepreneurship, Marketing, Economics, and Strategy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+        <section class="founder-section">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title fw-bold">Our Leadership</h2>
+                </div>
+
+                <div class="row justify-content-center" id="founder-container">
+                    <!-- Founder info will be dynamically generated here -->
+                </div>
+
+                <div class="row justify-content-center mt-4" id="lead-developer-container">
+                    <!-- Lead developer info will be dynamically generated here -->
+                </div>
+
+                <div class="row justify-content-center mt-4" id="outreach-officer-container">
+                    <!-- Outreach officer info will be dynamically generated here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Vice Presidents Section -->
+        <section class="leadership-section">
+            <div class="container">
+                <div class="text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title fw-bold">Vice Presidents</h2>
+                    <p class="lead">Leadership across our five business sectors</p>
+                </div>
+
+                <div class="row g-4" id="vice-presidents-container">
+                    <!-- Vice presidents will be dynamically generated here -->
+                </div>
+            </div>
+        </section>
+
+        <div id="footer-placeholder"></div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src='data.js'></script>
+        <script src='content-renderer.js'></script>
+        <script src='script.js'></script>
+
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+        </script>
+    </body>
+</html>
