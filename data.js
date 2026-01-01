@@ -1,45 +1,66 @@
 const BDYC_DATA = {
     currentMonth: "January 2026",
 
+    prompts: {
+        month: "January 2026",
+        sectors: {
+            finance: {
+                title: "Finance",
+                prompt: "Build a diversified $10,000 investment portfolio for a long-term investor with a 10+ year time horizon. Allocate funds across at least three asset classes (such as stocks, bonds, ETFs, or alternatives). Explain your asset allocation, overall risk level, and expected returns, and justify why this portfolio fits a long-term strategy."
+            },
+            entrepreneurship: {
+                title: "Entrepreneurship",
+                prompt: "Identify a real, clearly defined problem faced by students or young adults. Propose a startup that solves this problem, describe how the product or service works, and explain why your solution would succeed compared to existing alternatives."
+            },
+            marketing: {
+                title: "Marketing",
+                prompt: "Given a $500 marketing budget, design a strategy to grow a new startup from 0 to 1,000 users within a short time frame. Identify your target audience, marketing channels you would use, how you would allocate the budget, and how you would measure success."
+            },
+            economics: {
+                title: "Economics",
+                prompt: "Choose a recent price change in housing, gas, food, or labor. Use supply and demand principles to explain what caused the price change, identifying shifts in supply and/or demand and the economic factors behind them."
+            },
+            strategy: {
+                title: "Strategy",
+                prompt: "You are the CEO of a mid-sized consumer products company whose profits have declined by 15% over the past year due to rising costs and slowing demand. You have a limited budget and must choose between cutting operating expenses or investing in growth initiatives. Choose one strategy, explain your decision, and justify it using financial, competitive, and market-based reasoning."
+            }
+        }
+    },
+
     sectors: [
         {
             id: "finance",
             name: "Finance & Investing",
             icon: "fas fa-chart-line",
-            shortDescription: "Analyze markets, build portfolios, and develop financial strategies.",
-            fullDescription: "Each challenge focuses on real-world business problems — from analyzing markets to building investment strategies. Members choose one or multiple sectors to compete in.",
+            fullDescription: "Build a diversified $10,000 investment portfolio for a long-term investor with a 10+ year time horizon. Allocate funds across at least three asset classes (such as stocks, bonds, ETFs, or alternatives). Explain your asset allocation, overall risk level, and expected returns, and justify why this portfolio fits a long-term strategy.",
             color: "#014089"
         },
         {
             id: "entrepreneurship",
             name: "Entrepreneurship",
             icon: "fas fa-lightbulb",
-            shortDescription: "Create startup ideas, develop business models, and pitch your vision.",
-            fullDescription: "Develop innovative startup ideas, create comprehensive business plans, and pitch your entrepreneurial vision to our panel of judges.",
+            fullDescription: "Identify a real, clearly defined problem faced by students or young adults. Propose a startup that solves this problem, describe how the product or service works, and explain why your solution would succeed compared to existing alternatives.",
             color: "#014089"
         },
         {
             id: "marketing",
             name: "Marketing",
             icon: "fas fa-bullhorn",
-            shortDescription: "Design campaigns and build brand strategies that resonate.",
-            fullDescription: "Design compelling marketing campaigns, analyze consumer behavior, and develop brand strategies that make an impact.",
+            fullDescription: "Given a $500 marketing budget, design a strategy to grow a new startup from 0 to 1,000 users within a short time frame. Identify your target audience, marketing channels you would use, how you would allocate the budget, and how you would measure success.",
             color: "#014089"
         },
         {
             id: "economics",
             name: "Economics",
             icon: "fas fa-globe-americas",
-            shortDescription: "Explore trends, analyze policies, and understand market dynamics.",
-            fullDescription: "Explore macroeconomic trends, conduct policy analysis, and examine global market dynamics shaping our world.",
+            fullDescription: "Choose a recent price change in housing, gas, food, or labor. Use supply and demand principles to explain what caused the price change, identifying shifts in supply and/or demand and the economic factors behind them.",
             color: "#014089"
         },
         {
             id: "strategy",
             name: "Strategy",
             icon: "fas fa-chess",
-            shortDescription: "Develop competitive strategies and solve complex business problems.",
-            fullDescription: "Develop competitive business strategies, solve complex organizational problems, and create long-term plans for success.",
+            fullDescription: "You are the CEO of a mid-sized consumer products company whose profits have declined by 15% over the past year due to rising costs and slowing demand. You have a limited budget and must choose between cutting operating expenses or investing in growth initiatives. Choose one strategy, explain your decision, and justify it using financial, competitive, and market-based reasoning.",
             color: "#014089"
         }
     ],
@@ -161,7 +182,7 @@ const BDYC_DATA = {
     links: {
         googleClassroom: "https://classroom.google.com/c/ODIzNTk2NTA0MTMx?cjc=7bi7wief",
         instagram: "https://www.instagram.com/thebdyc/",
-        submitForm: "https://docs.google.com/forms/d/e/1FAIpQLScmpSFM3QB1SazTuTLcj2pQbXGQojf3l4gSP0KUCiARZudz-Q/viewform?usp=sharing&ouid=105657286588998117755"
+        submitForm: "https://forms.gle/B7aSuC26dexeVLah9"
     },
 
     benefits: [
@@ -278,4 +299,3 @@ const BDYC_DATA = {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = BDYC_DATA;
 }
-

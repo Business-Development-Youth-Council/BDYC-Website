@@ -3,6 +3,13 @@ function getSectorIcon(sectorName) {
     return sector ? sector.icon : 'fas fa-briefcase';
 }
 
+// Helper: derive a short summary from the fullDescription (first sentence)
+function getSummaryFromFull(full) {
+    if (!full) return '';
+    const sentences = full.split('.').map(s => s.trim()).filter(Boolean);
+    return sentences.length ? sentences[0] + (sentences[0].endsWith('.') ? '' : '.') : full;
+}
+
 function renderSectorCards() {
     const container = document.getElementById('sector-cards-container');
     if (!container) return;
@@ -17,7 +24,7 @@ function renderSectorCards() {
                     </div>
                     <h3 class="sector-title">${sector.name}</h3>
                     <p class="sector-description">
-                        ${sector.shortDescription}
+                        ${getSummaryFromFull(sector.fullDescription)}
                     </p>
                 </div>
             </div>
@@ -218,7 +225,7 @@ function renderSectorInfoCards() {
                     <i class="${sector.icon} fa-2x me-3" style="color: #E8C14E;"></i>
                     <div>
                         <h5 class="fw-bold mb-1">${sector.name}</h5>
-                        <p class="mb-0">${sector.shortDescription.split(',')[0]}</p>
+                        <p class="mb-0">${getSummaryFromFull(sector.fullDescription)}</p>
                     </div>
                 </div>
             </div>
@@ -435,4 +442,3 @@ if (document.readyState === 'loading') {
 } else {
     initializeDynamicContent();
 }
-
