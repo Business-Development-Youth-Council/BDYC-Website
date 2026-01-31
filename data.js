@@ -83,12 +83,12 @@ const BDYC_DATA = {
             linkedin: "https://www.linkedin.com/in/ishbir-singh/"
         },
         outreachOfficer: {
-            name: "Derek Lin",
+            name: "Justin Velecela",
             title: "Outreach Officer",
-            image: "Images/Leaders/Derek Lin.png",
-            bio: "As an outreach officer at the Business Development Youth Council, Derek Lin will focus on recruiting new members to compete in monthly competitions throughout a range of five business sectors. He joined BYDC to gain experience in the business field and to help students around the country to gain experience as well as using their critical thinking in competitions. Derek participates in clubs like DECA to gain leadership, communication and enhance problem solving techniques. He is motivated by his profound interest in the business and finance world.",
+            image: "Images/Leaders/Justin Velecela.png",
+            bio: "As an outreach officer at the Business Development Youth Council, Justin Velecela is focused on expanding the organization by recruiting new monthly members to participate in competitive business events. He joined BYDC to gain hands-on experience in the business field while helping students nationwide apply critical thinking and real-world problem-solving skills through monthly competitions. Justin is actively involved in leadership and academic activities that strengthen his communication, organization, and outreach abilities. He is motivated by a strong interest in business, finance, and building opportunities that allow students to grow and succeed..",
             icon: "fas fa-bullhorn",
-            linkedin: "http://linkedin.com/in/derek-linderek"
+            linkedin: "https://www.linkedin.com/in/justin-velecela/"
         },
         vicePresidents: [
             {
