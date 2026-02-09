@@ -1,28 +1,29 @@
 const BDYC_DATA = {
-    currentMonth: "January 2026",
+    currentMonth: "February 2026",
+    currentWinnersMonth: "January 2026",
 
     prompts: {
-        month: "January 2026",
+        month: "February 2026",
         sectors: {
             finance: {
                 title: "Finance",
-                prompt: "Build a diversified $10,000 investment portfolio for a long-term investor with a 10+ year time horizon. Allocate funds across at least three asset classes (such as stocks, bonds, ETFs, or alternatives). Explain your asset allocation, overall risk level, and expected returns, and justify why this portfolio fits a long-term strategy."
+                prompt: "You are the VP of Finance for a mid-sized retail company. Sales are growing steadily, but profits are shrinking due to rising interest rates and higher operating costs. You have limited capital and must decide how to allocate funds between paying down debt, investing in new growth opportunities, or building cash reserves. What financial strategy would you choose, and why? How would you balance short-term stability with long-term growth?"
             },
             entrepreneurship: {
                 title: "Entrepreneurship",
-                prompt: "Identify a real, clearly defined problem faced by students or young adults. Propose a startup that solves this problem, describe how the product or service works, and explain why your solution would succeed compared to existing alternatives."
+                prompt: "A mid-sized company is struggling because its costs are going up and there are many competitors in the market. As a strategy consultant, your job is to help stop the company from falling behind and help it succeed in the future. Create a strong plan that will beat competitors, and set the company up for long-term growth."
             },
             marketing: {
                 title: "Marketing",
-                prompt: "Given a $500 marketing budget, design a strategy to grow a new startup from 0 to 1,000 users within a short time frame. Identify your target audience, marketing channels you would use, how you would allocate the budget, and how you would measure success."
+                prompt: "Please evaluate how modern technology companies, such as Apple, Amazon, or Microsoft, use integrated marketing and sales strategies to sustain growth in competitive global markets. Discuss the role of data analytics, digital branding, and personalized consumer experiences in shaping sales outcomes and long-term customer loyalty."
             },
             economics: {
                 title: "Economics",
-                prompt: "Choose a recent price change in housing, gas, food, or labor. Use supply and demand principles to explain what caused the price change, identifying shifts in supply and/or demand and the economic factors behind them."
+                prompt: "Evaluate the role of government in managing the economy. Should governments intervene more or less in markets during economic crises? Support your position with historical or modern examples."
             },
             strategy: {
                 title: "Strategy",
-                prompt: "You are the CEO of a mid-sized consumer products company whose profits have declined by 15% over the past year due to rising costs and slowing demand. You have a limited budget and must choose between cutting operating expenses or investing in growth initiatives. Choose one strategy, explain your decision, and justify it using financial, competitive, and market-based reasoning."
+                prompt: "You are the manager of a regional chain of coffee shops. Over the past year, customer traffic has dropped by 20%, while the cost of supplies and labor has increased. Your goal is to develop a strategy to boost sales, reduce costs, and improve overall profitability. What steps would you take, and how would you prioritize them?"
             }
         }
     },
@@ -32,35 +33,35 @@ const BDYC_DATA = {
             id: "finance",
             name: "Finance & Investing",
             icon: "fas fa-chart-line",
-            fullDescription: "Build a diversified $10,000 investment portfolio for a long-term investor with a 10+ year time horizon. Allocate funds across at least three asset classes (such as stocks, bonds, ETFs, or alternatives). Explain your asset allocation, overall risk level, and expected returns, and justify why this portfolio fits a long-term strategy.",
+            fullDescription: "You are the VP of Finance for a mid-sized retail company. Sales are growing steadily, but profits are shrinking due to rising interest rates and higher operating costs. You have limited capital and must decide how to allocate funds between paying down debt, investing in new growth opportunities, or building cash reserves. What financial strategy would you choose, and why? How would you balance short-term stability with long-term growth?",
             color: "#014089"
         },
         {
             id: "entrepreneurship",
             name: "Entrepreneurship",
             icon: "fas fa-lightbulb",
-            fullDescription: "Identify a real, clearly defined problem faced by students or young adults. Propose a startup that solves this problem, describe how the product or service works, and explain why your solution would succeed compared to existing alternatives.",
+            fullDescription: "A mid-sized company is struggling because its costs are going up and there are many competitors in the market. As a strategy consultant, your job is to help stop the company from falling behind and help it succeed in the future. Create a strong plan that will beat competitors, and set the company up for long-term growth.",
             color: "#014089"
         },
         {
             id: "marketing",
             name: "Marketing",
             icon: "fas fa-bullhorn",
-            fullDescription: "Given a $500 marketing budget, design a strategy to grow a new startup from 0 to 1,000 users within a short time frame. Identify your target audience, marketing channels you would use, how you would allocate the budget, and how you would measure success.",
+            fullDescription: "Please evaluate how modern technology companies, such as Apple, Amazon, or Microsoft, use integrated marketing and sales strategies to sustain growth in competitive global markets. Discuss the role of data analytics, digital branding, and personalized consumer experiences in shaping sales outcomes and long-term customer loyalty.",
             color: "#014089"
         },
         {
             id: "economics",
             name: "Economics",
             icon: "fas fa-globe-americas",
-            fullDescription: "Choose a recent price change in housing, gas, food, or labor. Use supply and demand principles to explain what caused the price change, identifying shifts in supply and/or demand and the economic factors behind them.",
+            fullDescription: "Evaluate the role of government in managing the economy. Should governments intervene more or less in markets during economic crises? Support your position with historical or modern examples.",
             color: "#014089"
         },
         {
             id: "strategy",
             name: "Strategy",
             icon: "fas fa-chess",
-            fullDescription: "You are the CEO of a mid-sized consumer products company whose profits have declined by 15% over the past year due to rising costs and slowing demand. You have a limited budget and must choose between cutting operating expenses or investing in growth initiatives. Choose one strategy, explain your decision, and justify it using financial, competitive, and market-based reasoning.",
+            fullDescription: "You are the manager of a regional chain of coffee shops. Over the past year, customer traffic has dropped by 20%, while the cost of supplies and labor has increased. Your goal is to develop a strategy to boost sales, reduce costs, and improve overall profitability. What steps would you take, and how would you prioritize them?",
             color: "#014089"
         }
     ],
@@ -136,48 +137,59 @@ const BDYC_DATA = {
 
     currentWinners: [
         {
-            sector: "Finance & Investing",
-            winnerName: "Winner Announcement Coming Soon",
-            school: "School/City - TBA",
-            description: "The January 2026 Finance & Investing challenge winner will be announced soon. Check back for the winning submission!",
-            workLink: null,
-            announced: false
-        },
-        {
             sector: "Entrepreneurship",
-            winnerName: "Winner Announcement Coming Soon",
-            school: "School/City - TBA",
-            description: "The January 2026 Entrepreneurship challenge winner will be announced soon. Check back for the winning submission!",
-            workLink: null,
-            announced: false
-        },
-        {
-            sector: "Marketing",
-            winnerName: "Winner Announcement Coming Soon",
-            school: "School/City - TBA",
-            description: "The January 2026 Marketing challenge winner will be announced soon. Check back for the winning submission!",
-            workLink: null,
-            announced: false
+            winnerName: "Derek Lin",
+            school: "Francis Lewis High School / Junior",
+            description: "Pathly - Turning Student Potential into Action",
+            workLink: "https://drive.google.com/open?id=1MFOjCbiZrY9-6GDdzpX3VN6aWye8X4or",
+            announced: true
         },
         {
             sector: "Economics",
-            winnerName: "Winner Announcement Coming Soon",
-            school: "School/City - TBA",
-            description: "The January 2026 Economics challenge winner will be announced soon. Check back for the winning submission!",
-            workLink: null,
-            announced: false
+            winnerName: "Ashley Adanuty",
+            school: "Springbrook High School / 10th Grade",
+            description: "The Rise of Gas Prices",
+            workLink: "https://drive.google.com/open?id=1EZ5L8Rax1f13C9UCorbWitZqlRLl-Z5HCZ4uLi0SrnM",
+            announced: true
         },
         {
             sector: "Strategy",
-            winnerName: "Winner Announcement Coming Soon",
-            school: "School/City - TBA",
-            description: "The January 2026 Strategy challenge winner will be announced soon. Check back for the winning submission!",
-            workLink: null,
-            announced: false
+            winnerName: "Justin Velecela",
+            school: "Hightstown High School / 11th Grade",
+            description: "Leveraging Business Strategy to Drive Sustainable Economic Impact",
+            workLink: "https://drive.google.com/open?id=1C7pc0C3ca4AP7vfSdX7_2lfK2NCDbPTkWlez3HeaJzY, https://drive.google.com/open?id=1BNbBOPEVK_ZIh_UjoaAopRaa10MnjeXluUmY_bIQz78",
+            announced: true
         }
     ],
 
-    archive: [],
+    archive: [
+        {
+            month: "January 2026",
+            winners: [
+                {
+                    sector: "Entrepreneurship",
+                    winnerName: "Derek Lin",
+                    school: "Francis Lewis High School / Junior",
+                    description: "Pathly - Turning Student Potential into Action",
+                    workLink: "https://drive.google.com/open?id=1MFOjCbiZrY9-6GDdzpX3VN6aWye8X4or"
+                },
+                {
+                    sector: "Economics",
+                    winnerName: "Ashley Adanuty",
+                    school: "Springbrook High School / 10th Grade",
+                    description: "The Rise of Gas Prices",
+                    workLink: "https://drive.google.com/open?id=1EZ5L8Rax1f13C9UCorbWitZqlRLl-Z5HCZ4uLi0SrnM"
+                },
+                {
+                    sector: "Strategy",
+                    winnerName: "Justin Velecela",
+                    school: "Hightstown High School / 11th Grade",
+                    description: "Leveraging Business Strategy to Drive Sustainable Economic Impact",
+                    workLink: "https://drive.google.com/open?id=1C7pc0C3ca4AP7vfSdX7_2lfK2NCDbPTkWlez3HeaJzY, https://drive.google.com/open?id=1BNbBOPEVK_ZIh_UjoaAopRaa10MnjeXluUmY_bIQz78"
+                }
+            ]
+        }
+    ],
 
     links: {
         googleClassroom: "https://classroom.google.com/c/ODIzNTk2NTA0MTMx?cjc=7bi7wief",

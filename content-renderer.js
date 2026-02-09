@@ -85,6 +85,14 @@ function renderCurrentMonth() {
     });
 }
 
+function renderCurrentWinnersMonth() {
+    const elements = document.querySelectorAll('.current-winners-month-display');
+    const winnersMonth = BDYC_DATA.currentWinnersMonth || BDYC_DATA.currentMonth;
+    elements.forEach(el => {
+        el.textContent = winnersMonth;
+    });
+}
+
 
 function renderProcessSteps() {
     const container = document.getElementById('process-steps-container');
@@ -405,7 +413,7 @@ function renderArchive() {
 function initializeDynamicContent() {
 
     renderCurrentMonth();
-
+    renderCurrentWinnersMonth();
 
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
