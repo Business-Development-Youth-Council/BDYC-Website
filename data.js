@@ -33,6 +33,7 @@ const BDYC_DATA = {
             id: "finance",
             name: "Finance & Investing",
             icon: "fas fa-chart-line",
+            shortDescription: "Master financial decision-making, capital allocation, and investment strategy.",
             fullDescription: "You are the VP of Finance for a mid-sized retail company. Sales are growing steadily, but profits are shrinking due to rising interest rates and higher operating costs. You have limited capital and must decide how to allocate funds between paying down debt, investing in new growth opportunities, or building cash reserves. What financial strategy would you choose, and why? How would you balance short-term stability with long-term growth?",
             color: "#014089"
         },
@@ -40,6 +41,7 @@ const BDYC_DATA = {
             id: "entrepreneurship",
             name: "Entrepreneurship",
             icon: "fas fa-lightbulb",
+            shortDescription: "Develop competitive strategies and business plans to help companies succeed.",
             fullDescription: "A mid-sized company is struggling because its costs are going up and there are many competitors in the market. As a strategy consultant, your job is to help stop the company from falling behind and help it succeed in the future. Create a strong plan that will beat competitors, and set the company up for long-term growth.",
             color: "#014089"
         },
@@ -47,6 +49,7 @@ const BDYC_DATA = {
             id: "marketing",
             name: "Marketing",
             icon: "fas fa-bullhorn",
+            shortDescription: "Analyze integrated marketing strategies and brand development in competitive markets.",
             fullDescription: "Please evaluate how modern technology companies, such as Apple, Amazon, or Microsoft, use integrated marketing and sales strategies to sustain growth in competitive global markets. Discuss the role of data analytics, digital branding, and personalized consumer experiences in shaping sales outcomes and long-term customer loyalty.",
             color: "#014089"
         },
@@ -54,6 +57,7 @@ const BDYC_DATA = {
             id: "economics",
             name: "Economics",
             icon: "fas fa-globe-americas",
+            shortDescription: "Evaluate government intervention and its impact on economic stability and growth.",
             fullDescription: "Evaluate the role of government in managing the economy. Should governments intervene more or less in markets during economic crises? Support your position with historical or modern examples.",
             color: "#014089"
         },
@@ -61,6 +65,7 @@ const BDYC_DATA = {
             id: "strategy",
             name: "Strategy",
             icon: "fas fa-chess",
+            shortDescription: "Create organizational strategies to boost profitability and competitive advantage.",
             fullDescription: "You are the manager of a regional chain of coffee shops. Over the past year, customer traffic has dropped by 20%, while the cost of supplies and labor has increased. Your goal is to develop a strategy to boost sales, reduce costs, and improve overall profitability. What steps would you take, and how would you prioritize them?",
             color: "#014089"
         }

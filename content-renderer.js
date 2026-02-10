@@ -24,7 +24,7 @@ function renderSectorCards() {
                     </div>
                     <h3 class="sector-title">${sector.name}</h3>
                     <p class="sector-description">
-                        ${getSummaryFromFull(sector.fullDescription)}
+                        ${sector.shortDescription}
                     </p>
                 </div>
             </div>
