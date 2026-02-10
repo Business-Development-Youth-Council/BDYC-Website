@@ -199,7 +199,7 @@ const BDYC_DATA = {
     links: {
         googleClassroom: "https://classroom.google.com/c/ODIzNTk2NTA0MTMx?cjc=7bi7wief",
         instagram: "https://www.instagram.com/thebdyc/",
-        submitForm: "https://forms.gle/B7aSuC26dexeVLah9"
+        submitForm: "https://forms.gle/Mje5GsP9pWXoxvkj9"
     },
 
     benefits: [
