@@ -190,7 +190,7 @@ const BDYC_DATA = {
                     winnerName: "Justin Velecela",
                     school: "Hightstown High School / 11th Grade",
                     description: "Leveraging Business Strategy to Drive Sustainable Economic Impact",
-                    workLink: "https://drive.google.com/open?id=1C7pc0C3ca4AP7vfSdX7_2lfK2NCDbPTkWlez3HeaJzY, https://drive.google.com/open?id=1BNbBOPEVK_ZIh_UjoaAopRaa10MnjeXluUmY_bIQz78"
+                    workLink: "https://docs.google.com/document/d/1BNbBOPEVK_ZIh_UjoaAopRaa10MnjeXluUmY_bIQz78/edit?usp=sharing"
                 }
             ]
         }
